@@ -8,46 +8,60 @@ token1 = []
 # Tokens paired with FTM, USDC/FTM, fUSDT/FTM, etc
 FTM_PAIRS = [
   # ADD OR REMOVE TOKENS HERE.
-  tokens.USDC,
-  tokens.TOMB,
+  # tokens.USDC,
+  # tokens.TOMB,
   tokens.TSHARE,
-  tokens.fUSDT,
-  tokens.DAI,
-  tokens._3SHARES,
-  tokens._2OMB,
-  tokens.IB,
-  tokens.SPELL,
-  tokens.TREEB,
-  tokens.MULTI,
-  tokens.ANY,
-  tokens.BIFI,
-  tokens.GEIST,
-  tokens.BOO,
+  # tokens.SCREAM,
+  # tokens.fUSDT,
+  # tokens.DAI,
+  # tokens._3SHARES,
+  # tokens._2OMB,
+  # tokens.IB,
+  # tokens.SPELL,
+  # tokens.TREEB,
+  # tokens.MULTI,
+  # tokens.ANY,
+  # tokens.BIFI,
+  # tokens.GEIST,
+  # tokens.BOO,
+  # tokens.COFFIN,
+  # tokens.CFI,
+  # tokens.SHADE,
+  # tokens.INV,
+  # tokens.LINK,
 ]
 
 # DAI pairs. Popular with OHM forks
 DAI_PAIRS = [
   # ADD OR REMOVE TOKENS HERE.
-  tokens.USDC,
+  tokens.EXOD,
 ]
 
-for token in FTM_PAIRS:
-  token0.append(tokens.FTM)
-  token1.append(token)
+# USDC_PAIRS = [
+#   tokens.FRAX,
+# ]
+# for token in FTM_PAIRS:
+#   token0.append(tokens.FTM)
+#   token1.append(token)
 
-for token in DAI_PAIRS:
-  token0.append(tokens.DAI)
-  token1.append(token)
+# for token in DAI_PAIRS:
+#   token0.append(tokens.DAI)
+#   token1.append(token)
 
+# for token in USDC_PAIRS:
+#   token0.append(tokens.USDC)
+#   token1.append(token)
 # Custom pairs
 
 # Example for adding USDC/OXD and BTC/ETH
-token0.append(tokens.USDC)
-token1.append(tokens.OXD)
+token0.append(tokens.FTM)
+token1.append("0x1d43697d67cb5d0436cc38d583ca473a1bfebc7a")
 
-token0.append(tokens.BTC)
-token1.append(tokens.ETH)
+# token0.append(tokens.BTC)
+# token1.append(tokens.ETH)
 
+# print(len(token0))
+# print(len(token1))
 assert len(token0) == len(token1)
 
 config = dotenv_values(".env")
